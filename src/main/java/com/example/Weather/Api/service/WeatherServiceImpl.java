@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import javax.annotation.PostConstruct;
+
 @Service
 public class WeatherServiceImpl implements WeatherService{
 
@@ -19,6 +21,7 @@ public class WeatherServiceImpl implements WeatherService{
 
     @Autowired
     private RestTemplate restTemplate;
+
 
 
     @Override

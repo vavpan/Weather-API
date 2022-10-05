@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather API Application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+    <h1>Weather Tracker API</h1>
+    <p>Search for the city you want to view weather details</p>
+
+<table class="table">
+    <tr>
+        <th>City</th>
+        <th>Temperature Now</th>
+        <th>Weather Description</th>
+        <th>Minimum Temperature</th>
+        <th>Maximum Temperature</th>
+    </tr>
+  <tr>
+      <td th:text="${cityName}">
+      <td th:text="${weatherTemp}">
+      <td th:text="${weatherDesc}">
+      <td th:text="${weatherMinTemp}">
+      <td th:text="${weatherMaxTemp}">
+
+
+  </tr>
+
+
+</table>
+
+
+</body>
+</html>
