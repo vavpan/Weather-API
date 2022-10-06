@@ -4,9 +4,12 @@ import com.example.Weather.Api.model.WeatherModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.PostConstruct;
+import javax.swing.*;
 import java.util.List;
 
 @Service
@@ -36,11 +39,12 @@ public class WeatherServiceImpl implements WeatherService{
     @Override
     public WeatherModel searchByCity(String cityName) {
 
-        WeatherModel result;
-        if (cityName != null && (cityName.trim().length() > 0 )){
-            result = restTemplate.getForObject(weatherApiBaseUrl+cityName+"&appid="+apiKey+"&units=metric" , WeatherModel.class);
-            return result;
-        }
+
+            WeatherModel result;
+            if (cityName != null && (cityName.trim().length() > 0)) {
+                result = restTemplate.getForObject(weatherApiBaseUrl + cityName + "&appid=" + apiKey + "&units=metric", WeatherModel.class);
+                return result;
+            }
 
            return null;
         }
