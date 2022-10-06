@@ -22,6 +22,12 @@ public class WeatherController {
     public static final String ANSI_RED = "\u001B[31m";
     public static final String ANSI_CYAN = "\u001B[36m";
 
+    @GetMapping("/")
+    public String main(){
+        return "home";
+    }
+
+    // In case you want to search the city you want via URL
     @GetMapping("/info/{cityValue}")
     public String home(Model model , @PathVariable("cityValue") String cityValue){
 
@@ -42,6 +48,7 @@ public class WeatherController {
         return "home";
     }
 
+    // Search via search-button
     @GetMapping("/search")
     public String search(@RequestParam("cityName") String cityValue, Model model){
 
@@ -63,6 +70,7 @@ public class WeatherController {
               System.out.println("Null OR Invalid value has been entered");
           }
   }
+
 
 
             return "home";
