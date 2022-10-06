@@ -27,6 +27,8 @@ public class WeatherController {
         return "home";
     }
 
+
+
     // In case you want to search the city you want via URL
     @GetMapping("/info/{cityValue}")
     public String home(Model model , @PathVariable("cityValue") String cityValue){

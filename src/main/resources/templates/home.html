@@ -23,11 +23,29 @@
 
     <table class="table">
         <tr>
-            <th>City</th>
-            <th>Temperature Now</th>
-            <th>Weather Description</th>
-            <th>Minimum Temperature</th>
-            <th>Maximum Temperature</th>
+
+            <th>
+                <img width="50px" height="50px" th:src="@{/images/city.png}"/>
+                City</th>
+
+            <th>
+                <img width="50px" height="50px" th:src="@{/images/temp.png}"/>
+                Temperature Now</th>
+
+
+            <th>
+                <img width="50px" height="50px" th:src="@{/images/desc.png}"/>
+                Weather Description</th>
+
+
+            <th>
+                <img width="50px" height="50px" th:src="@{/images/min-temp.png}"/>
+                Minimum Temperature</th>
+
+
+            <th>
+                <img width="50px" height="50px" th:src="@{/images/max-temp.png}"/>
+                Maximum Temperature</th>
         </tr>
         <tr>
             <td th:text="${cityName}">
