@@ -6,15 +6,12 @@ import com.example.Weather.Api.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLOutput;
 
 @Controller
-@RequestMapping("/api")
+@RequestMapping("/")
 public class WeatherController {
 
     @Autowired
@@ -42,6 +39,15 @@ public class WeatherController {
 
 
         return "home";
+    }
+
+    @GetMapping("/search")
+    public String search(@RequestParam("cityName") String name, Model model){
+
+
+        WeatherModel weatherModel        = weatherService.searchByCity(name);
+
+
     }
 
 
