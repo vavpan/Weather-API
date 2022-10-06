@@ -42,11 +42,24 @@ public class WeatherController {
     }
 
     @GetMapping("/search")
-    public String search(@RequestParam("cityName") String name, Model model){
+    public String search(@RequestParam("cityName") String cityValue, Model model){
 
 
-        WeatherModel weatherModel        = weatherService.searchByCity(name);
+        String name = weatherService.getWeatherInfoByCity(cityValue).getName();
+        double temp =  weatherService.getWeatherInfoByCity(cityValue).getMain().getTemp();
+        String desc = weatherService.getWeatherInfoByCity(cityValue).getWeather().listIterator().next().getDescription();
+        double minTemp = weatherService.getWeatherInfoByCity(cityValue).getMain().getTemp_min();
+        double maxTemp = weatherService.getWeatherInfoByCity(cityValue).getMain().getTemp_max();
 
+        model.addAttribute("cityName" , name);
+        model.addAttribute("weatherTemp" , temp);
+        model.addAttribute("weatherDesc" , desc);
+        model.addAttribute("weatherMinTemp" , minTemp);
+        model.addAttribute("weatherMaxTemp" , maxTemp);
+
+
+
+        return "home";
 
     }
 

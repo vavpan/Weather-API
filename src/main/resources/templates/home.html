@@ -12,26 +12,35 @@
     <h1>Weather Tracker API</h1>
     <p>Search for the city you want to view weather details</p>
 
-<table class="table">
-    <tr>
-        <th>City</th>
-        <th>Temperature Now</th>
-        <th>Weather Description</th>
-        <th>Minimum Temperature</th>
-        <th>Maximum Temperature</th>
-    </tr>
-  <tr>
-      <td th:text="${cityName}">
-      <td th:text="${weatherTemp}">
-      <td th:text="${weatherDesc}">
-      <td th:text="${weatherMinTemp}">
-      <td th:text="${weatherMaxTemp}">
+    <form th:action="@{/search}" class="form-inline">
+        <input
+                class="form-control  ml-5 mr-sm-2 mb-3" type="search"
+                name="cityName" placeholder="Search by city" />
+
+        <button class="btn btn-success mb-3" type="submit">Search</button>
+    </form>
 
 
-  </tr>
+    <table class="table">
+        <tr>
+            <th>City</th>
+            <th>Temperature Now</th>
+            <th>Weather Description</th>
+            <th>Minimum Temperature</th>
+            <th>Maximum Temperature</th>
+        </tr>
+        <tr>
+            <td th:text="${cityName}">
+            <td th:text="${weatherTemp}">
+            <td th:text="${weatherDesc}">
+            <td th:text="${weatherMinTemp}">
+            <td th:text="${weatherMaxTemp}">
 
 
-</table>
+        </tr>
+
+
+    </table>
 
 
 </body>

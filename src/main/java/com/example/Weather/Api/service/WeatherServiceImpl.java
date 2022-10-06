@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.PostConstruct;
+import java.util.List;
 
 @Service
 public class WeatherServiceImpl implements WeatherService{
@@ -31,4 +32,19 @@ public class WeatherServiceImpl implements WeatherService{
        WeatherModel result = restTemplate.getForObject(weatherApiBaseUrl+cityValue+"&appid="+apiKey+"&units=metric" , WeatherModel.class);
        return result;
     }
-}
+
+    @Override
+    public WeatherModel searchByCity(String cityName) {
+
+        WeatherModel result;
+        if (cityName != null && (cityName.trim().length() > 0 )){
+            result = restTemplate.getForObject(weatherApiBaseUrl+cityName+"&appid="+apiKey+"&units=metric" , WeatherModel.class);
+            return result;
+        }
+
+           return null;
+        }
+
+
+    }
+

@@ -7,5 +7,7 @@ public interface WeatherService {
 
     public WeatherModel getWeatherInfoByCity(String cityValue);
 
+    public WeatherModel searchByCity(String cityName);
+
 
 }
