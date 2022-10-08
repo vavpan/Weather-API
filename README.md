@@ -11,6 +11,7 @@
 <li>Java</li>
 <li>Spring Boot</li>
 <li>Spring Web MVC</li>
+<li>thymeleaf</li>
 <li>Maven</li>
 <li>Jackson</li>
 <li>JSON</li>
