@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather API Application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+    <h1>Weather Tracker API</h1>
+
+
+    <table class="table">
+        <tr>
+            <th>City</th>
+            <th>Temperature Now</th>
+            <th>Minimum Temperature</th>
+            <th>Maximum Temperature</th>
+            <th>Date</th>
+
+
+        </tr>
+
+
+
+
+        <tr
+
+                th:each="data: ${forecast.list}">
+
+            <td th:text="${forecast.city.name}" />
+            <td th:text="${data.main.temp}" />
+            <td th:text="${data.main.getTemp_min()}" />
+            <td th:text="${data.main.getTemp_max()}" />
+            <td th:text="${data.dt_txt}" />
+        </tr>
+
+    </table>
+</div>
+
+</body>
+</html>

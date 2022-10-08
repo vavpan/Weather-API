@@ -1,4 +1,5 @@
-package com.example.Weather.Api.details;
+package com.example.Weather.Api.details.forecastDetails;
+
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -14,11 +15,6 @@ import lombok.Setter;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SysDetails {
 
-    private int type;
+    private String pod;
 
-    private long id;
-
-    private String country;
-
-    private long sunrise;
 }

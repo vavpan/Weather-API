@@ -8,8 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpClientErrorException;
 
-import javax.swing.*;
-import java.sql.SQLOutput;
 
 @Controller
 @RequestMapping("/")
@@ -29,7 +27,7 @@ public class WeatherController {
 
 
 
-    // In case you want to search the city you want via URL
+    // In case you want to search the city via URL
     @GetMapping("/info/{cityValue}")
     public String home(Model model , @PathVariable("cityValue") String cityValue){
 
@@ -78,6 +76,8 @@ public class WeatherController {
             return "home";
 
         }
+
+
 
 
 

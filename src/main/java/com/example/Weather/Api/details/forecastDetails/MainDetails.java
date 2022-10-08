@@ -1,4 +1,5 @@
-package com.example.Weather.Api.details;
+package com.example.Weather.Api.details.forecastDetails;
+
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -22,11 +23,15 @@ public class MainDetails {
 
     private double temp_max;
 
-    private double pressure;
+    private int pressure;
+
+    private int sea_level;
+
+    private int grnd_level;
 
     private int humidity;
 
-
+    private double temp_kf;
 
 
 }

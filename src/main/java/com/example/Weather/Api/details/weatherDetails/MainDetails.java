@@ -1,5 +1,4 @@
-package com.example.Weather.Api.details;
-
+package com.example.Weather.Api.details.weatherDetails;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -13,8 +12,21 @@ import lombok.Setter;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class CloudDetails {
+public class MainDetails {
 
-    private int all;
+    private double temp;
+
+    private double feels_like;
+
+    private double temp_min;
+
+    private double temp_max;
+
+    private double pressure;
+
+    private int humidity;
+
+
+
 
 }

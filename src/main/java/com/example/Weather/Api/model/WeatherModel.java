@@ -1,6 +1,6 @@
 package com.example.Weather.Api.model;
 
-import com.example.Weather.Api.details.*;
+import com.example.Weather.Api.details.weatherDetails.*;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
@@ -30,7 +30,7 @@ public class WeatherModel {
 
       private WindDetails wind;
 
-      private CloudDetails clouds;
+      private CloudsDetails clouds;
 
       private long dt;
 
