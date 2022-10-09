@@ -3,6 +3,7 @@ package com.example.Weather.Api.controller;
 
 
 import com.example.Weather.Api.service.ForecastWeatherService;
+import org.apache.coyote.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,6 +25,7 @@ public class ForecastWeatherController{
 
         return "forecast";
     }
+
 
 
 
