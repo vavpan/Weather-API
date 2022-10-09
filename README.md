@@ -23,6 +23,8 @@
 <p> Open WeatherApiApplication.java Class and run the project from there. API key is included in application.properties File so you don't need to add something more. Once its run, type in your broswer -> http://localhost:8080/ -> to direct you to the main page. 
 Now you can search your city either using search button or via URL by typing -> http://localhost:8080/info/(Here you type the city) </p>
 
-<h4> V.1: Done </h4>
+<h4> V.1: Search for the city you want and view its info - Done ✅</h4>
 
-<h4> V.2: Add forecast weather (under construction) </h4>
+<h4> V.2: Add forecast weather - Done ✅</h4>
+
+<h4> V.3: Improve app UI - Under Construction 🚧</h4>
