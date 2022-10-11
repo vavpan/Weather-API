@@ -49,14 +49,14 @@
 
         <tr
 
-                th:each="data: ${forecast.list}">
+                th:each="data: ${forecast?.list}">
 
-            <td th:text="${forecast.city.name}" />
-            <td th:text="${data.main.temp}" />
-            <td th:text="${data.main.feels_like}" />
-            <td th:text="${data.main.getTemp_min()}" />
-            <td th:text="${data.main.getTemp_max()}" />
-            <td th:text="${data.dt_txt}" />
+            <td th:text="${forecast?.city?.name}" />
+            <td th:text="${data?.main?.temp}" />
+            <td th:text="${data?.main?.feels_like}" />
+            <td th:text="${data?.main?.getTemp_min()}" />
+            <td th:text="${data?.main?.getTemp_max()}" />
+            <td th:text="${data?.dt_txt}" />
         </tr>
 
     </table>

@@ -9,7 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.HttpClientErrorException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -23,6 +25,7 @@ public class ForecastWeatherController{
 
     @GetMapping("/forecast")
     public String forecastDisplay(){
+
 
         return "forecast";
     }
@@ -38,9 +41,16 @@ public class ForecastWeatherController{
     @GetMapping("/find")
     public String getInfo(@RequestParam("cityName") String cityName,Model model){
 
-        int counterValue = 40; // maximum forecast weather
+        final int counterValue = 40; // maximum forecast weather
 
-        model.addAttribute("forecast", forecastWeatherService.getForecastInfoByCity(counterValue, cityName));
+        try {
+            model.addAttribute("forecast", forecastWeatherService.getForecastInfoByCity(counterValue, cityName));
+        }catch (HttpClientErrorException e){
+            if (e.getStatusCode().is4xxClientError()){
+                System.out.println("Null OR Invalid value has been entered");
+            }
+        }
+
         return "forecast";
     }
 
