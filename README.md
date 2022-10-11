@@ -4,8 +4,7 @@
 <p> An application in which you can view the weather of the city you want. Using openWeather API we retrieve data for more than 200,000 cities</p>
            <br>
 
-![WeatherAPI](https://user-images.githubusercontent.com/74924160/194704934-3ab6fce2-9ef3-4c9e-aaa9-3fdc34595521.png)
-
+![weather](https://user-images.githubusercontent.com/74924160/195214777-228ae679-3d4e-458a-8486-5462c4b4831d.png)
 ![forecast](https://user-images.githubusercontent.com/74924160/195214559-66dd1fe5-b025-4272-8836-f759e50ddc55.png)
 
 
