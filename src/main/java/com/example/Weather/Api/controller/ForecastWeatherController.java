@@ -1,9 +1,5 @@
 package com.example.Weather.Api.controller;
 
-
-
-import com.example.Weather.Api.details.forecastDetails.CityDetails;
-import com.example.Weather.Api.details.forecastDetails.ListDetails;
 import com.example.Weather.Api.service.ForecastWeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,8 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpClientErrorException;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 
 @Controller

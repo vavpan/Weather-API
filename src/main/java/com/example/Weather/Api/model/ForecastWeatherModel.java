@@ -1,9 +1,6 @@
 package com.example.Weather.Api.model;
 
 import com.example.Weather.Api.details.forecastDetails.*;
-import com.example.Weather.Api.details.weatherDetails.CloudsDetails;
-import com.example.Weather.Api.details.weatherDetails.WeatherDetails;
-import com.example.Weather.Api.details.weatherDetails.WindDetails;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
