@@ -6,6 +6,9 @@
 
 ![WeatherAPI](https://user-images.githubusercontent.com/74924160/194704934-3ab6fce2-9ef3-4c9e-aaa9-3fdc34595521.png)
 
+![forecast](https://user-images.githubusercontent.com/74924160/195214559-66dd1fe5-b025-4272-8836-f759e50ddc55.png)
+
+
 <b> Technologies used </b>
 <ul>
 <li>Java</li>
