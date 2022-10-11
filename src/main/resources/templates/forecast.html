@@ -7,11 +7,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 </head>
+
 <body>
 <div class="container">
-    <h1>Weather Tracker API</h1>
+    <h1>Forecast Weather Tracker API</h1>
 
+    <form th:action="@{/find}" class="form-inline">
+        <input
+                class="form-control  ml-5 mr-sm-2 mb-3" type="search"
+                name="cityName" placeholder="Search by city" />
 
+        <button class="btn btn-success mb-3" type="submit">Search</button>
+    </form>
 
     <table class="table">
         <tr>
@@ -20,7 +27,10 @@
                 City</th>
             <th>
                 <img width="50px" height="50px" th:src="@{/images/temp.png}"/>
-                Temperature Now</th>
+                Temperature</th>
+            <th>
+                <img width="50px" height="50px" th:src="@{/images/feels-like.png}"/>
+                Feels Like</th>
             <th>
                 <img width="50px" height="50px" th:src="@{/images/min-temp.png}"/>
                 Minimum Temperature</th>
@@ -43,6 +53,7 @@
 
             <td th:text="${forecast.city.name}" />
             <td th:text="${data.main.temp}" />
+            <td th:text="${data.main.feels_like}" />
             <td th:text="${data.main.getTemp_min()}" />
             <td th:text="${data.main.getTemp_max()}" />
             <td th:text="${data.dt_txt}" />

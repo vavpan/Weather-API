@@ -66,19 +66,19 @@ public class WeatherController {
             model.addAttribute("weatherMaxTemp", maxTemp);
 
         }catch (HttpClientErrorException e){
-          if (e.getStatusCode().is4xxClientError()){
-              System.out.println("Null OR Invalid value has been entered");
-          }
-  }
-
-
-
-            return "home";
-
+            if (e.getStatusCode().is4xxClientError()){
+                System.out.println("Null OR Invalid value has been entered");
+            }
         }
 
 
 
-
+        return "home";
 
     }
+
+
+
+
+
+}
